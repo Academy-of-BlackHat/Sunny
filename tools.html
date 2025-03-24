@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+      <link rel="stylesheet" href="styles.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+        <link href="edit.php" rel="php">
+        <link href="logout.php" rel="php">
+      <title> Academy of BlackHat </title>
+      <style type="text/css">
+         body{
+            background-color: #212424;
+            text-decoration:bold;
+            color: whitesmoke;
+            padding: 50px;
+            
+         }
+         header{
+            align-items: right;
+            padding-left: 990px;
+         }
+        .logo{
+         width: 500px;
+         height: 500px;
+         border-radius: 250px;
+         padding: 50px;
+         background: transparent;
+         float: left;
+         margin-right: 10px;
+         position: float;
+         align-items: right;
+        }
+        h3{
+         padding-left: 100px;
+        }
+         h6{
+         padding-left: 500px;
+        }
+        h7{
+         padding-left: 40px;
+        }
+        h1{
+         padding-left: 270px;
+        }
+        h5{
+         padding-left: 460px;
+        }
+        .Hacking{
+         padding-left: 70px;
+        }
+        h4{
+         padding-left: 40px;
+        }
+        h8{
+         padding-left: 590px;
+        }
+        footer{
+         background-color: transparent;
+        }
+        h2{
+         padding-left: 100px;
+        }
+        .topic{
+         padding: 50px;
+        }
+        .container {
+  width: 2000px;
+  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: flex;
+      -ms-flex-pack: flex;
+          justify-content: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      
+}
+
+.container .card {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+  border-radius: 30px;
+  
+}
+
+.container .card .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.container .card .face.face1 {
+  background: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.container .card .face.face1 img {
+  max-width: 100px;
+}
+
+.container .card .face.face1 h3 {
+  margin: 10px 0 0;
+  color: #fff;
+  text-align:flex;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.container .card:hover .face.face1 {
+  -webkit-transform: translateY(-100%) rotateX(90deg);
+          transform: translateY(-100%) rotateX(90deg);
+  background: #7550ac;
+}
+
+.container .card .face.face2 {
+  background:#323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: flex;
+  padding: 20px;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: translateY(100%) rotateX(90deg);
+          transform: translateY(100%) rotateX(90deg);
+}
+
+.container .card:hover .face.face2 {
+  -webkit-transform: translateY(0) rotateX(0deg);
+          transform: translateY(0) rotateX(0deg);
+}
+       
+
+      </style>
+   </head>
+   <body>
+       <header>
+        <div class="nav">
+         <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="tools.html">Tools</a>
+  </li>
+  <li class="nav-item">
+   <a class="nav-link" href="about.html">About</a>
+ </li>
+ <li class="nav-item">
+    <div class="dropdown">
+        <a class='nav-link dropdown-toggle' href='edit.php?id=$res_id' id='dropdownMenuLink'
+            data-bs-toggle='dropdown' aria-expanded='false'>
+            <i class='bi bi-person'></i>
+        </a>
+  
+  
+        <ul class="dropdown-menu mt-2 mr-0" aria-labelledby="dropdownMenuLink">
+  
+            <li>
+                <?php
+  
+                $id = $_SESSION['id'];
+                $query = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
+  
+                while ($result = mysqli_fetch_assoc($query)) {
+                    $res_username = $result['username'];
+                    $res_email = $result['email'];
+                    $res_id = $result['id'];
+                }
+  
+  
+                echo "<a class='dropdown-item' href='edit.php?id=$res_id'>Change Profile</a>";
+  
+  
+                ?>
+  
+            </li>
+            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+        </ul>
+</ul>
+         
+      </div>  
+       </header>
+    <b><h1>     Academy of BlackHat</b></h1>
+   <img class="logo" src="logo.png" class="img-thumbnail" alt="..." ><br><br>Hacking just means building something quickly or testing the boundaries of what can be done.<br>
+   <section class="con">
+      There is no right and wrong. There's only fun and boring....<br>
+      <br><br><br><p class="intro"><h3>Learn to Secure your Life.</h3></p>
+     <h6> understanding the risks and prevention techniques.</h6>
+     <h6>Hackers rarely have full knowledge of the technology stack of a target..</h6>
+     <h6>No technology that’s connected to the internet is unhackable...</h6>
+     <h6>The weakest link in the security chain is the human element...</h6>
+     <h6>Privacy should not be a luxury good.</h6><br><br><br>
+   </section><br><br><br>
+      
+           <h2>Tools of Hacking : </h2>
+           <p class="topic">
+            Ethical hacking tools are crucial in the cybersecurity landscape for several key reasons:
+
+            Efficient Vulnerability Detection: These tools quickly and accurately identify vulnerabilities within systems, applications, and networks, allowing organizations to address potential security weaknesses promptly.
+            Comprehensive Security Assessments: Ethical hacking tools enable thorough security assessments, covering network scanning, penetration testing, application security, and data integrity checks.
+            Automated Processes: Automation features in these tools streamline repetitive tasks, saving time and reducing human error.
+            Real-time Monitoring and Alerts: Some tools offer real-time monitoring and alerts, helping organizations detect and respond to threats as they occur.
+            Compliance and Reporting: Robust reporting features help organizations maintain compliance with industry standards and regulations, demonstrating due diligence to regulatory bodies.
+            Enhanced Incident Response: In the event of a security breach, these tools assist in forensic analysis, identifying the entry point, extent of the breach, and attacker actions.
+
+           
+           1.Information Gathering Tools:<br>
+           2.Password Cracking Tools:<br>
+           3.Wireless Hacking Tools:<br>
+           4.Vulnerability Scanning Tools:<br>
+           5.Social Engineering Tools:<br>
+           6.Forensic Tools:<br>
+           7.Exploitation Tools:<br>
+           8.Web Application  Tools:<br></p>
+
+          <br><br><br><br><h3> 54 Tools of Hacking : </h3>
+          <div>
+
+            <div class="container">
+               <div class="card">
+                   <div class="face face1">
+                       <div class="content">
+                          Nmap
+                           
+                       </div>
+                   </div>
+                   <div class="face face2">
+                       <div class="content">
+                           <p><a href="#">more.....</a></p>
+                       </div>
+                   </div>
+               </div>
+
+             
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Shodan
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+               
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Maltego
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+           
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Havester
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+         
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Recon-NG
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+          
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Amass
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+            
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Censys
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+              
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             QSINT Framework
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+               
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Gobuster
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+             
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             John The Ripper
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+            
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Hydra
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+              
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Hashcat
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+               
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             OPHCrack
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+             
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Medusa
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+          
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             THC-Hydra
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+          
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Cain & Abel
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+              
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Aircrack-NG
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+            
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Wifite
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+             
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Kismet
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+               
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             TCPDump
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+           
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Airsnort
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+          
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Netstumbler
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+              
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Reaver
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+               
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             OpenVAS
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+            
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Nessus
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+              
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             AppScan
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+            
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             LYNIS
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+            
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Retina
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+            
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Nexpose
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+              
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Gophish
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+          
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             HiddenEye
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+             
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             SocialFish
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+             
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             EvilURL
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+           
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Eveilginx
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+               
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             SluethKit
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+          
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Autopsy
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+           
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Volatility
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+             
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Guymager
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+            
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Foremost
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+              
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Binwalk
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+            
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Wireshark
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+          
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Brup Suite
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+     
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Metasploit Framework
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+          
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             SQL Map
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+              
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             ZAP
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+            
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             ExploitDB
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+         
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Core Impact
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+           
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             Cobalt strike
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+               
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             OWASP ZAP
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+             
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                        Nikto
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+              
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             WPScan
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  
+              
+                  <div class="card">
+                      <div class="face face1">
+                          <div class="content">
+                             App Spider
+                              
+                          </div>
+                      </div>
+                      <div class="face face2">
+                          <div class="content">
+                              <p><a href="#">more.....</a></p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                     <div class="face face1">
+                         <div class="content">
+                            njRAT
+                             
+                         </div>
+                     </div>
+                     <div class="face face2">
+                         <div class="content">
+                             <p><a href="#">more.....</a></p>
+                         </div>
+                     </div>
+                 </div> 
+                 <div class="card">
+                  <div class="face face1">
+                      <div class="content">
+                         Acunetic
+                          
+                      </div>
+                  </div>
+                  <div class="face face2">
+                      <div class="content">
+                          <p><a href="#">more.....</a></p>
+                      </div>
+                  </div>
+              </div>
+              
+
+                  
+
+          </div> 
+          <p class="topic">
+            They are professionals with in-depth knowledge and understanding of computer systems, security, and networks. <br>They are professionals who are well-versed in the potential threats and vulnerabilities that can hack computer systems.
+            Ethical hacking is mainly used in businesses or organizations to secure sensitive data from adversaries.<br> Therefore ethical hacking is a process of preventing the important data and information of organizations from being hacked.
+            Ethical hacking tools have great importance in Ethical hacking as these tools help in making sure that the software functions are executed swiftly and tested under standard and extreme security systems.
+          </p>
+
+<footer>
+        ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br><br>
+        <h4>  Academy of BlackHat</h4><br>
+        
+        <h7>Note:: This content is educational purpose only,</h7><br><h7>based on this any illegal activities are noticed we are not responsible fot that. </h7><br>
+        <h8>-- shaik sunny</h8><br>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<h5>Future Hackers Learn for free now..... </h5>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+     </footer>
+      <script src="assets/js/main.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+   </body>
+</html>

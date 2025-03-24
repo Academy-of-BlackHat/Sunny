@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+      <link rel="stylesheet" href="styles.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+      <link href="edit.php" rel="php">
+      <link href="logout.php" rel="php">
+
+      <title> Academy of BlackHat </title>
+      <style type="text/css">
+         body{
+            background-color: #212424;
+            text-decoration:bold;
+            color: whitesmoke;
+            padding: 50px;
+            position: flex;
+            padding-left: 50px;
+         }
+         header{
+            align-items: right;
+            padding-left: 990px;
+         }
+        .logo{
+         width: 500px;
+         height: 500px;
+         border-radius: 250px;
+         padding: 50px;
+         background: transparent;
+         float: left;
+         margin-right: 10px;
+         position: flex;
+         align-items: right;
+        }
+       
+         h6{
+         padding-left: 500px;
+        }
+       h8{
+         padding-left: 600px;
+        }
+       h7{
+         padding-left: 100px;
+        }
+       h2{
+         padding-left: 140px;
+        }
+        h5 {
+         padding-left: 100px;
+        }
+        h4{
+         padding-left: 350px;
+        }
+        footer{
+         background-color: transparent;
+        }
+  
+        .img1{
+         position: absolute;
+         transition: 2s;
+         transform-origin: 50% 50%;
+         width: 100%;
+         
+        }
+
+        .sunny{
+         width: 500px;
+         height: 600px;
+         border-radius: 100px;
+         padding: 50px;
+         background: transparent;
+         float: right;
+         margin-right: 10px;
+         position: flex;
+         align-items: right;
+          transition: 2s;
+         transform-origin: 50% 50%;
+         
+        }
+        .sunny:hover .img1{
+       filter: blur(20px);
+       
+    
+        }
+       ion-icon{
+       font-size: 50px;
+       padding: 10px;
+       }
+    .nam{
+        align-items: left;
+        position: flex;
+        text-align: left;
+        padding-left: 140px;
+    }
+    
+    .ssc{
+         width: 330px;
+         height: 330px;
+         border-radius: 100px;
+         padding: 10px;
+         background: transparent;
+         float: right;
+         margin-right: 10px;
+         position: flex;
+         align-items: left;
+          transition: 2s;
+         transform-origin: 50% 50%;
+         border-color: burlywood;
+         border: 5px;
+
+        }
+        .sunny:hover {
+       filter: blur(10px);
+       
+    
+        }
+        .job{
+        
+         width: 100px;
+         height: 100px;
+         border-radius: 100px;
+         padding: 10px;
+         background: transparent;
+         float: right;
+         margin-right: 10px;
+         position: flex;
+         align-items: left;
+          transition: 2s;
+         transform-origin: 50% 50%;
+         border-color: burlywood;
+         border: 5px;
+
+
+        }
+      </style>
+    
+    
+   </head>
+   <body>
+       <header>
+        <div class="nav">
+         <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="about.html">About</a>
+  </li>
+  <li class="nav-item">
+   <a class="nav-link" href="tools.html">Tools</a>
+ </li>
+ <li class="nav-item">
+   <div class="dropdown">
+       <a class='nav-link dropdown-toggle' href='edit.php?id=$res_id' id='dropdownMenuLink'
+           data-bs-toggle='dropdown' aria-expanded='false'>
+           <i class='bi bi-person'></i>
+       </a>
+ 
+ 
+       <ul class="dropdown-menu mt-2 mr-0" aria-labelledby="dropdownMenuLink">
+ 
+           <li>
+               <?php
+ 
+               $id = $_SESSION['id'];
+               $query = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
+ 
+               while ($result = mysqli_fetch_assoc($query)) {
+                   $res_username = $result['username'];
+                   $res_email = $result['email'];
+                   $res_id = $result['id'];
+               }
+ 
+ 
+               echo "<a class='dropdown-item' href='edit.php?id=$res_id'>Change Profile</a>";
+ 
+ 
+               ?>
+ 
+           </li>
+           <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+       </ul>
+  
+</ul>
+         
+      </div>  
+       </header>
+    
+   <img class="logo" src="logo.png" class="img-thumbnail" alt="..." ><br>
+      
+    <b><h1>     Academy of BlackHat</b></h1><br>
+    <h6>Black Hat academy is the most friendly and relavantly to learn the hacking,( Students All are Access to Learn)
+BlackHat Academy provides students with opportunities to interact with and learn from top industry professionals content like...<br>Ethical Hacking with Linux, <br>Network Defense ,<br> Cryptography, <br>Digital Forensis,<br>IOT Security,<br>Penetration Testing,<br> Junior Cybersecurity Analist.... </h6><br>
+Contact of the Administrator can you send the topics to interest to learn for free in Blackhat Academy.<br>
+
+
+<div class="social">
+   <a href="https://www.facebook.com/share/i3PgQoqEyizMBuah/"><ion-icon name="logo-facebook"></ion-icon></a>
+   <a href="https://www.instagram.com/s_u_n_n_y_s_h_a_i_k/profilecard/?igsh=MW12Y2F1bXpxM3J3MQ=="><ion-icon name="logo-instagram"></ion-icon></a>
+   <a href="mailto:academyofblackhat@gmail.com"><ion-icon name="mail-outline"></ion-icon></a>
+   <a href="https://youtube.com/@blackhatacademy-03?si=NXUXedjey6ckKSRL"><ion-icon name="logo-youtube"></ion-icon></a>
+   <a href="https://www.linkedin.com/in/sunny-shaik-a51263330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><ion-icon name="logo-linkedin"></ion-icon></a>
+</div><br><br><br> <br>
+<div class="shaik">
+    <img  class="sunny" src="sunny.jpg"><br><br><br><br><br><br>
+    <h2 class="nam"><b> SHAIK SUNNY</h2></b>
+    <h5>Inspiration of my carrier of Hacking field is Dr.KD (sunshine.)</h5>
+    <h7>I am the part of future Enthusiasm work Involvement,</h7><br><h7> I can use my Knowledge and skills to Accomplish my Goals.... </h7><br>
+    <h7>Completition of Ethical Hacker in Cicso.</h7><br>
+    <h7>I need to Guide So many people to protect from illegal Hackers.</h7><br><br>
+    <h5>This website is not providing any completetion certificates.</h5><br>
+    <h5>I hope you people are using this website for learn Securities and information about yours.</h5><br><h7>If you need any information about this site contact me on above mentioned social media sites..</h7><br><br><br><br><br>
+    
+</div>
+
+
+<br><br><br>
+<br><br><br><br><marquee>
+   Academy of BlackHat is representing the partner and inspiration of this site is Dr.KD (SUNSHINE).
+</marquee><br>
+
+<div class="companies">
+    <h2>The Most Cybersecurity jobs providing companies, choose your life....</h2>
+    
+Companies around the world are stepping up to combat a surge of cyberattacks. Offering services like threat detection, vulnerability management and antivirus protection, they play an important role in safeguarding critical data and infrastructures. Many of these companies, including the ones below, have a strong presence in India, contributing to the country’s growing influence in the global cybersecurity landscape, below all companies are drag on builtin  website easy to apply jobs.</p>
+
+<div class="jobs">
+    <a href="https://builtin.com/company/palo-alto-networks/jobs"><img src="palo alto networks.png" class="job"></a>
+    <a href="https://builtin.com/company/crowdstrike"><img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=contain,w=200,h=200,q=100/https://builtin.com/sites/www.builtin.com/files/2023-09/6L-zG5oq_400x400.jpg" class="job"></a>
+    <a href="https://builtin.com/company/cloudflare"><img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=contain,w=200,h=200,q=100/https://builtin.com/sites/www.builtin.com/files/2021-04/CFLogo.png" class="job"></a>
+    
+    <a href="https://builtin.com/company/wesecureapp"><img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=contain,w=200,h=200,q=100/https://builtin.com/sites/www.builtin.com/files/2022-08/WeSecureApp.jpg" class="job"></a>
+    <a href="https://builtin.com/company/gramax-cybertech"><img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=contain,w=200,h=200,q=100/https://builtin.com/sites/www.builtin.com/files/2024-10/gramaxcyb_logo.jpeg" class="job"></a>
+    <a href="https://builtin.com/company/tufin"><img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=contain,w=200,h=200,q=100/https://builtin.com/sites/www.builtin.com/files/2021-12/1519878688185.jpg" class="job"></a>
+    <a href="https://builtin.com/company/zscaler"><img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=contain,w=200,h=200,q=100/https://builtin.com/sites/www.builtin.com/files/2021-06/Zscaler-tech-companies-San-Jose.png" class="job"></a>
+    <a href="https://builtin.com/company/tata-consultancy-services"><img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=contain,w=200,h=200,q=100/https://builtin.com/sites/www.builtin.com/files/2021-08/1625820626997.jpeg" class="job"></a>
+    <a href="https://builtin.com/company/quick-heal"><img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=contain,w=200,h=200,q=100/https://builtin.com/sites/www.builtin.com/files/2023-12/1631331095908.jpeg" class="job"></a>
+    <a href="https://builtin.com/company/wipro-limited"><img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=contain,w=200,h=200,q=100/https://builtin.com/sites/www.builtin.com/files/2021-07/Wipro%20Limited_0.jpeg" class="job"></a>
+   
+    <a href="https://www.accenture.com/in-en/careers"><img src="data:image/png;base64,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" class="job"></a>
+     <a href="https://www.cisco.com/c/en/us/about/careers.html" ><img src="https://jobs.cisco.com/portal/4/images/logo.svg" class="job"></a>
+</div>
+</div>
+
+
+
+<br><br><br><br><br><br><h5>Go and apply for new jobs by choosing the discription of job roles.</h5>
+
+    <footer>
+        ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br><br>
+        <h5>  Academy of BlackHat</h5><br>
+        
+        <h7>Note:: This content is educational purpose only,</h7><br><h7>based on this any illegal activities are noticed we are not responsible fot that. </h7><br>
+        <h8>-- shaik sunny</h8><br>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<h4>Future Hackers Learn for free now.....</h4>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+     </footer>
+
+
+
+
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      <script src="assets/js/main.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+   </body>
+</html>

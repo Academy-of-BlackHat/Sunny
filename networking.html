@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+      <link rel="stylesheet" href="styles.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+      <link href="edit.php" rel="php">
+      <link href="logout.php" rel="php">
+
+      <title> Academy of BlackHat </title>
+      <style type="text/css">
+         body{
+            background-color: #212424;
+            text-decoration:bold;
+            color: whitesmoke;
+            padding: 50px;
+            
+         }
+         header{
+            align-items: right;
+            padding-left: 990px;
+         }
+        .logo{
+         width: 500px;
+         height: 500px;
+         border-radius: 250px;
+         padding: 50px;
+         background: transparent;
+         float: left;
+         margin-right: 10px;
+         position: float;
+         align-items: right;
+        }
+        h3{
+         padding-left: 100px;
+        }
+         h6{
+         padding-left: 500px;
+        }
+        h7{
+         padding-left: 40px;
+        }
+        h1{
+         padding-left: 299px;
+        }
+        h5{
+         padding-left: 760px;
+        }
+        .Hacking{
+         padding-left: 70px;
+        }
+        h4{
+         padding-left: 40px;
+        }
+        p{
+         padding-left:75px;
+        }
+        h8{
+         padding-left: 590px;
+        }
+        footer{
+         background-color: transparent;
+        }
+        h2{
+         padding-left: 100px;
+        }
+        .topic{
+         padding: 50px;
+        }
+        .container {
+  width: 2000px;
+  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: flex;
+      -ms-flex-pack: flex;
+          justify-content: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      
+}
+
+.container .card {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+  border-radius: 30px;
+  
+}
+
+.container .card .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.container .card .face.face1 {
+  background: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.container .card .face.face1 img {
+  max-width: 100px;
+}
+
+.container .card .face.face1 h3 {
+  margin: 10px 0 0;
+  color: #fff;
+  text-align:flex;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.container .card:hover .face.face1 {
+  -webkit-transform: translateY(-100%) rotateX(90deg);
+          transform: translateY(-100%) rotateX(90deg);
+  background: #7550ac;
+}
+
+.container .card .face.face2 {
+  background:#fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: flex;
+  padding: 20px;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: translateY(100%) rotateX(90deg);
+          transform: translateY(100%) rotateX(90deg);
+}
+
+.container .card:hover .face.face2 {
+  -webkit-transform: translateY(0) rotateX(0deg);
+          transform: translateY(0) rotateX(0deg);
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1d1d1d;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}  
+.content{
+  padding-left: 150px;
+} 
+.tn{
+  padding-left: 70px;
+} 
+
+      </style>
+   </head>
+   <body>
+       <header>
+        <div class="nav">
+         <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="tools.html">Tools</a>
+  </li>
+  <li class="nav-item">
+   <a class="nav-link" href="about.html">About</a>
+ </li>
+ <li class="nav-item">
+  <div class="dropdown">
+      <a class='nav-link dropdown-toggle' href='edit.php?id=$res_id' id='dropdownMenuLink'
+          data-bs-toggle='dropdown' aria-expanded='false'>
+          <i class='bi bi-person'></i>
+      </a>
+
+
+      <ul class="dropdown-menu mt-2 mr-0" aria-labelledby="dropdownMenuLink">
+
+          <li>
+              <?php
+
+              $id = $_SESSION['id'];
+              $query = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
+
+              while ($result = mysqli_fetch_assoc($query)) {
+                  $res_username = $result['username'];
+                  $res_email = $result['email'];
+                  $res_id = $result['id'];
+              }
+
+
+              echo "<a class='dropdown-item' href='edit.php?id=$res_id'>Change Profile</a>";
+
+
+              ?>
+
+          </li>
+          <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+      </ul>
+</ul>
+         
+      </div>  
+       </header>
+    <b><h1>     Academy of BlackHat</b></h1>
+   
+
+
+   <div class="topics">
+     <h3>Computer Networking :</h3>
+     
+       
+   </div><br>
+
+<div class="one">
+  <h3> Understanding the Networking Basics :</h3>
+  <p><b>What is a network? </b> <br>In the simplest terms, a
+    network is a group of two or more computers (or devices) that are linked together. They can
+    share resources, exchange files, or allow electronic communications. The computers on a
+    network can be linked through cables, telephone lines, radio waves, satellites, or infrared
+    light beams.<br>Full Networking Notes can download below.....
+    </p>
+    <h3>Types of Networks:</h3><br><p>
+      
+      Networks can be categorized into various types based on their size, scope, and purpose.
+      Here are the three most common types:<br>
+      1. Local Area Network (LAN): A LAN is a network that connects computers within a
+      limited area like a home, school, or office building.<br>
+      2. Wide Area Network (WAN): A WAN is a network that spans a large geographical
+      area, such as a city, state, or even a country.<br>
+      3. Metropolitan Area Network (MAN): A MAN typically covers an area the size of a
+      city or town.<br><br>
+      <a href="#"><img src="lan.webp"  class="tn" ></a>
+    <a href="#"><img src="wan.jpg"  class="tn" ></a>
+    <a href="#"><img src="man.jpg"  height="280px"  class="tn" ></a><br>
+      </p>
+      <h3>Hardware Components of a Network :</h3><br><p>Networks are not just about computers. They also include other hardware components that
+        facilitate the communication process:<br>
+        1. Routers: Devices that forward data packets between computer networks. Think of
+        them as the 'post office' of the network, directing traffic to ensure it gets where it's
+        supposed to go.<br>
+        2. Switches: These are like the 'traffic cops' for your network. They connect multiple
+        devices on a LAN and direct the flow of data to the correct destination.<br>
+        3. Network Interface Cards (NICs): These are hardware components installed in
+        computers that enable them to connect to a network.</p><br>
+        <a href="#"><img src="switches.jpg"  height="280px" class="tn" ></a>
+    <a href="#"><img src="routers.jpg"  class="tn" ></a>
+    <a href="#"><img src="nic.jpg"  height="280px"  class="tn" ></a><br>
+    <h3>Software Components of a Network :</h3><p>Software components play an equally crucial role in networks. They include<br>
+    <b><a href="os.html">Operating Systems :</a></b>Systems like Windows, MacOS, or Linux have built-in
+    networking capabilities.<br>
+      <b>Network Drivers:</b> These are software programs that control the network hardware
+      and provide an interface for the operating system to interact with it.<br>
+    <b><a href="protocols.pdf" download>
+      <img src="#" alt="Networking Port & Protocols ">
+    </a></b>These are sets of rules that govern how data is transferred
+      on a network.</b>
+      <br><br>
+     
+<b><h4>The Basics: How Computer Networks Work</h4> </b><br>
+Ever sent an email or streamed a movie and wondered how all of that information travels so
+quickly across your screen? It's kind of like magic, isn't it? Well, today we're going to pull
+back the curtain on that magic show and reveal what's going on behind the scenes.
+Welcome to the magnificent world of computer networking!<br>
+I know what you're thinking - "Computer networking? Isn't that super technical and
+complex?" Well, yes, and no. While it's true that networking can dive pretty deep, it's also
+something we can break down into bite-sized pieces.<br>
+Get ready as we unravel the journey of a simple email or a cute cat video from one device to
+another. Let's dive into the basics of how computer networks work. Trust me, by the end of
+this, you'll start seeing your daily memes and emails in a whole new light!<br><br>
+<b>The Magic of Communication</b><br>
+Think of the last time you sent an email. You typed a message, hit send, and within seconds,
+your message was in your friend's inbox, possibly thousands of miles away. But have you
+ever wondered what really happens behind the scenes? Let's take a closer look.<br>
+When you hit send, your simple email message is broken down into smaller, more
+manageable pieces called packets. These packets travel through a series of networks
+(including your local network and the internet), guided along by network protocols, until they
+reach their destination. Then, these packets are reassembled back into your original
+message.<br><br>
+<b>Data Packets and Their Journey</b><br>
+Here's where the true magic happens. A data packet is a tiny piece of your email message,
+each containing a chunk of your message, the sender's address, the receiver's address, and
+information about how to reassemble the packets back into the original message.<br>
+The journey of a data packet from one device to another is quite fascinating, as it doesn't
+necessarily follow a straight line. Instead, it can travel across multiple paths to get to its
+destination, jumping from one device (like routers or switches) to another.<br><br>
+<b>Protocols – The Traffic Rules of Networking</b><br>
+Just like we need rules to guide traffic on roads, networks need protocols. Protocols define
+the "rules of the road" for networks by specifying how data should be sent, received, and
+interpreted.<br>
+There are many types of network protocols, but let's discuss three of the most common:<br>
+1. Transmission Control Protocol (TCP): TCP is like a trusted courier, ensuring that
+data packets arrive at their intended destination without error and in the correct order.<br>
+2. Internet Protocol (IP): IP is the guiding star. It helps packets find their way around
+the network, assigning addresses to each packet.<br>
+3. Hypertext Transfer Protocol (HTTP): You've probably seen this one in your web
+browser's address bar. HTTP is used for transferring web pages and other resources
+on the web.<br><br>
+<b><h4>Network Devices – The Unsung Heroes</h4></b><br>
+Network devices play a critical role in sending, directing, and receiving data on a network.
+Let's meet some of them:<br>
+1. Routers: These devices connect different networks together. They analyze data
+packets and send them on the best route to their destination.<br>
+2. Switches: Switches connect various devices on the same network. They use the
+addresses in data packets to send them to the right device.<br>
+3. Modems: These are the gateways between your home network and the internet.
+They convert the digital data from your network into a format that can be transmitted
+over your internet connection.<br><br>
+That's a Wrap!<br>
+Whew! I hope that didn't feel like drinking from a firehose. Understanding the basics of how
+computer networks work is essential to the world of cybersecurity. With this foundation, we'll
+start exploring deeper topics in the next section, like network types and topologies. Trust me,
+it's going to be an exciting journey! Stick around, and let's decode the mysteries of
+networking together.<br><br>
+<b><h4>Networking Key Terminology</h4></b><br>
+Getting comfy with key networking terms is a bit like learning a new language. But instead of
+ordering a cup of coffee or asking for directions to the nearest library, you're navigating the
+fascinating world of computer networks. And guess what? I'm here to be your networking
+language tutor.<br>
+Remember that time when you sent an email and it got delivered to the other side of the
+world in an instant, or when you streamed your favorite movie in HD without any hiccups?
+That's all thanks to networks functioning behind the scenes, each part speaking this
+'networking language'.<br>
+As we explore this new language together, don't worry if you stumble upon a term you don't
+understand. It's totally normal. I'll make sure to break things down and explain them in a way
+that makes sense. And before you know it, you'll be tossing around networking terms like a
+pro.<br><br>
+ <b><h4>Network Nodes</h4></b><br>
+When you hear the term 'node' in the context of networking, you might wonder if we're
+talking about a point in a mathematical diagram or a part of a tree branch. As fascinating as
+those topics could be, in our world of computer networking, nodes have a different meaning
+altogether.<br><br>
+<b>What are Network Nodes?</b><br>
+Simply put, a network node is any device that can connect to a network and is capable of
+sending, receiving, or forwarding information over that network. This is the broad definition,
+and it encapsulates a range of devices you're probably already familiar with and some that
+might be new to you.<br>
+Types of Network Nodes<br>
+Let's get to know some of the members of the network node family:<br>
+1. Computers: This one's easy! Your laptop, your office workstation, or the massive
+servers in data centers - all these are nodes.<br>
+2. Networking Hardware: This includes devices like routers and switches, which help
+direct traffic across networks.<br>
+3. Peripheral Devices: Printers, fax machines, scanners, or any other devices
+connected to the network also qualify as nodes.<br>
+4. Network-Connected 'Smart' Devices: In our increasingly interconnected world,
+everyday objects like televisions, refrigerators, and even light bulbs, when connected
+to a network, are nodes.<br>
+5. Mobile Devices: Your smartphones and tablets are nodes too!<br><br>
+<b>Why are Network Nodes Important?</b><br>
+Think of network nodes as the 'citizens' of a network 'city'. Just as a city can't exist without its
+citizens, a network can't function without nodes. They're the points where messages are
+created (sending a file), received (downloading a webpage), or passed along (routing data to
+its destination).<br>
+To further illustrate this, imagine you're sending an email to a friend. Your laptop (node 1)
+sends the email as a data packet to your router (node 2), which sends it over the internet
+through a series of other routers and switches (more nodes). Finally, it reaches your friend's
+laptop (the final node), and they can read your email. Without these nodes, there's no
+network, and without a network, that email is not reaching your friend.<br><br>
+<b>Internet Service Provider (ISP)</b> <br>
+Ah, the ISP, or Internet Service Provider. This is a term you've probably come across every
+time you've paid your internet bill. And while we're all aware that they provide us with the
+internet, let's get a bit more familiar with what ISPs do and why they're so important in our
+networked world.<br>
+So, What Exactly is an ISP?<br>
+An ISP is a company that provides services for accessing, using, or participating in the
+Internet. Essentially, they're our gateway to the world wide web and all it has to offer.<br>
+The Role of an ISP
+ISPs serve a crucial role in the way we connect to the internet by providing us with two
+essential services:<br>
+1. Internet Access: ISPs connect us to the global network of networks, known as the
+Internet. They do this by providing a range of connection options to cater to different
+user needs, like DSL for residential use, or Fiber optics for businesses requiring
+higher speeds.<br>
+2. Internet Services: Beyond just providing access, ISPs also offer a slew of services
+such as email accounts, web hosting, and cloud storage.<br><br>
+<b>Different Types of ISPs</b><br>
+There are several types of ISPs, categorized based on how they deliver internet services to
+their customers:<br>
+1. Dial-Up ISPs: These are the pioneers, providing internet services through telephone
+lines. They're slow by today's standards, but hey, we all start somewhere!<br>
+2. DSL and Cable ISPs: These are the most common types of ISPs for residential
+customers. They provide internet services through telephone lines (DSL) and cable
+networks (Cable).<br>
+3. Fiber Optic ISPs: These are the superstars, offering extremely high-speed internet
+connections via Fiber Optic cables.<br>
+4. Satellite ISPs: These guys make the internet available in remote areas by beaming it
+from space. The speeds aren't the greatest, but it's better than nothing, right?<br>
+5. Wireless ISPs: These are becoming more common and provide internet services
+wirelessly. They're often found in urban areas where they can offer an alternative to
+DSL or Cable.<br><br>
+
+<b> <h4>Server</h4></b><br>
+Having covered what a client is, it's time to talk about the other half of the client-server
+relationship: the server.<br>
+A server is a computer or system that manages network resources and services. It's like the
+heart of a network, pumping out the data and services that clients need to function.
+<br>
+A server provides services to clients. These services can be anything from serving a web
+page, storing files, to handling email, and much more.<br>
+Here's an easy analogy. Picture a busy restaurant. The servers (waitstaff) cater to the needs
+of the diners (clients). The diners request services (like ordering food), and the servers fulfill
+those requests. In this analogy, the kitchen is like the server's hardware and software,
+preparing and dishing out what the clients need.<br><br>
+<b>Types of Servers</b><br>
+Just as a restaurant can have servers specializing in different tasks (bartenders, dessert
+servers, etc.), we have various types of servers in networking some of them are :<br>
+1. Web Server: This server stores and delivers web pages in response to client
+requests. When you type a URL into your web browser (a client), you're asking the
+web server to send you a copy of the web page you want to visit.<br>
+2. File Server: This type of server provides a central location for storing and accessing
+files. Many businesses use file servers so their employees can share resources and
+collaborate.<br>
+3. Database Server: This server provides database services and responds to queries
+from client machines. It's like a librarian who knows exactly where every book (piece
+of data) is stored.<br>
+4. Email Server: This server manages and transfers electronic mail messages. If you're
+using a service like Gmail or Outlook, you're interacting with an email server.
+5. Game Server: For the gamers out there, this one's for you. A game server is a
+server that runs the games we play online, managing game worlds and transmitting
+data about players' actions.<br><br>
+ <b><h4>IP Address</h4></b> <br>
+An IP address is a unique identifier for devices on a network. It's like your home address but
+for your computer or any device connected to the internet. Your IP address allows other
+devices to find you and send information your way.<br><br>
+How IP Addresses Work<br>
+Let's continue with the home address analogy to explain how IP addresses work. When
+someone sends you a letter, they write your home address on the envelope, which guides
+the postman to deliver it to your house. Similarly, when you send information over the
+internet (like when you click on a link to visit a website), your computer sends out the request
+with the IP address of your device and the IP address of the server that holds the website.
+This allows the data to know where to go and where to return the response.<br><br>
+<b>Types of IP Addresses</b><br>
+There are two types of IP addresses you need to know about:<br>
+1. IPv4: This is the most common type of IP address. It's a set of four numbers
+separated by periods, with each number ranging from 0 to 255. An example of an
+IPv4 address is "192.168.1.1".<br>
+2. IPv6: With more devices than ever connecting to the internet, we're running out of
+IPv4 addresses, hence the need for IPv6. These addresses are longer and allow for
+many more unique addresses. An example of an IPv6 address is
+"2001:0db8:85a3:0000:0000:8a2e:0370:7334".<br><br>
+Dynamic vs Static IP Addresses<br>
+IP addresses can be dynamic or static:<br>
+1. Dynamic IP addresses change every time your computer connects to the internet.<br>
+2. Static IP addresses remain the same. They're like a permanent home address for
+your device. Most devices use dynamic IP addresses because static IP addresses
+can pose security risks and are more expensive.<br> <br>
+
+<b> <h4>Port</h4></b>
+While talking about networks, you've probably heard the term 'port'. It might seem a bit
+maritime, but in networking, ports have a whole different meaning. Let's dive in and get a
+better understanding of what a port is.<br><br>
+Defining a Port<br>
+In computer networking, a port is an endpoint of communication in an operating system.
+While an IP address is used to identify the host in a network, a port number identifies a
+specific process or service running on that host.<br>
+
+<b>Common Ports and Their Uses</b><br>
+There are lots and lots of port numbers - 65,536 to be exact. Here are a few well-known
+ones:<br>
+1. Port 80: This port is typically used for HTTP (HyperText Transfer Protocol), the
+protocol for transferring web pages and web content.<br>
+2. Port 443: This port is commonly used for HTTPS (HTTP Secure), which is used for
+secure web browser communication.<br>
+3. Port 25: This port is used for SMTP (Simple Mail Transfer Protocol), which is used
+for email routing.<br>
+4. Port 22: This one is for SSH (Secure Shell), used for secure logins, file transfers,
+and command execution.<br><br>
+
+<b><h4> Firewall</h4></b>
+Alright, now that we've discussed IP addresses and ports, it's time to talk about a key player
+in network security: the firewall.<br>
+A firewall is a network security system that monitors and controls incoming and outgoing
+network traffic based on predetermined security rules. It forms a barrier between a trusted
+network (like your home or work network) and an untrusted one (like the internet).<br>
+How Firewalls Work<br>
+Imagine a firewall as a bouncer at the door of a club. The bouncer (firewall) checks
+everyone's ID (data packets) before they enter the club (your network). If they're on the
+guest list (approved by the firewall's rules), they can enter. If not, they're turned away.
+Firewalls inspect data packets (small chunks of data bundled for transmission) coming into
+and going out of a network. They check these packets against rules you set up to determine
+whether they should be allowed through or not.<br><br>
+<b>Types of Firewalls</b> <br>
+Firewalls come in different types, including:<br>
+1. Packet-Filtering Firewalls: The most basic type. They check data packets against a
+set of filters, like checking for correct addresses and ports.<br>
+2. Stateful Inspection Firewalls: These are a step up from packet-filtering firewalls.
+They not only inspect each packet but also keep track of ongoing connections and
+can block packets that deviate from the expected sequence.<br>
+3. Proxy Firewalls: These firewalls act as middlemen. They accept all traffic requests
+coming into the network by posing as the true recipient of the traffic. After inspecting
+the traffic, they pass along the legitimate traffic requests to the actual intended
+servers.<br>
+4. Next-Generation Firewalls (NGFWs): These are more sophisticated firewalls that
+combine traditional firewall technology with additional functionalities, like encrypted
+traffic inspection, intrusion prevention systems, and more.<br><br>
+
+<b> <h4>VPN (Virtual Private Network)</h4></b> <br>
+From firewalls, we'll now move on to another key concept in the world of networking: VPN, or
+Virtual Private Network.<br>
+A VPN is a technology that creates a safe and encrypted connection over a less secure
+network, like the internet. Essentially, it provides you with a private tunnel through the wild
+jungle of the internet.<br>
+How VPNs Work<br>
+Let's imagine you're at a coffee shop using their public Wi-Fi. This network is not very secure
+- it's like a clear glass tunnel where any passerby could potentially see what you're sending
+or receiving. When you use a VPN, it's like you're installing a one-way mirror along that
+tunnel. Now, even though you're on the same network as others, no one can see inside your
+specific 'tunnel' of internet traffic.<br>
+VPNs work by routing your connection through a server located elsewhere, and by
+encrypting your data. The server could be in a different city or even a different country. After
+your data reaches the VPN server, it's decrypted and sent on to its destination. This has the
+effect of masking your online actions and making it look like the data is coming from the VPN
+server, not from your device.<br><br>
+Why Use a VPN?<br>
+There are several reasons you might want to use a VPN:
+1. Security: VPNs encrypt your data, making it much more secure than a typical
+internet connection. This is particularly useful when you're using public Wi-Fi
+networks.<br>
+2. Privacy: Because your data appears to come from the VPN server, your own IP
+address is effectively hidden, protecting your identity online.<br>
+3. Circumventing Geoblocks: Some online content is restricted based on your
+geographic location. A VPN can make it seem like you're connecting from a different
+location, allowing you to access this content.<br><br><br>
+
+
+</p></div>
+
+<footer>
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br><br>
+  <h4>  Academy of BlackHat</h4><b><h5><a href="networking.pdf" download>
+    <img src="#" alt="Click to download  the  Networking notes........ " width="90" height="90">
+  </a></h5></b>
+  
+  <h7>Note:: This content is educational purpose only,</h7><br><h7>based on this any illegal activities are noticed we are not responsible fot that. </h7><br>
+  <h8>-- shaik sunny</h8><br>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<h5>Future Hackers Learn for free now..... </h5>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+</footer>
+<script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

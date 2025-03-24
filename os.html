@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+      <link rel="stylesheet" href="styles.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+      <link href="edit.php" rel="php">
+      <link href="logout.php" rel="php">
+
+      <title> Academy of BlackHat </title>
+      <style type="text/css">
+         body{
+            background-color: #212424;
+            text-decoration:bold;
+            color: whitesmoke;
+            padding: 50px;
+            
+         }
+         header{
+            align-items: right;
+            padding-left: 990px;
+         }
+        .logo{
+         width: 500px;
+         height: 500px;
+         border-radius: 250px;
+         padding: 50px;
+         background: transparent;
+         float: left;
+         margin-right: 10px;
+         position: float;
+         align-items: right;
+        }
+        h3{
+         padding-left: 100px;
+        }
+         h6{
+         padding-left: 500px;
+        }
+        h7{
+         padding-left: 40px;
+        }
+        h1{
+         padding-left: 270px;
+        }
+        h5{
+         padding-left: 460px;
+        }
+        h4{
+         padding-left: 200px;
+        }
+        .Hacking{
+         padding-left: 70px;
+        }
+        h4{
+         padding-left: 40px;
+        }
+        h8{
+         padding-left: 590px;
+        }
+        footer{
+         background-color: transparent;
+        }
+        h2{
+         padding-left: 100px;
+        }p{
+         padding-left: 200px;
+        }
+        .topic{
+         padding: 50px;
+        }
+        .container {
+  width: 2000px;
+  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: flex;
+      -ms-flex-pack: flex;
+          justify-content: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      
+}
+
+.container .card {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+  border-radius: 30px;
+  
+}
+
+.container .card .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.container .card .face.face1 {
+  background: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.container .card .face.face1 img {
+  max-width: 100px;
+}
+
+.container .card .face.face1 h3 {
+  margin: 10px 0 0;
+  color: #fff;
+  text-align:flex;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.container .card:hover .face.face1 {
+  -webkit-transform: translateY(-100%) rotateX(90deg);
+          transform: translateY(-100%) rotateX(90deg);
+  background: #7550ac;
+}
+
+.container .card .face.face2 {
+  background:#fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: flex;
+  padding: 20px;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: translateY(100%) rotateX(90deg);
+          transform: translateY(100%) rotateX(90deg);
+}
+
+.container .card:hover .face.face2 {
+  -webkit-transform: translateY(0) rotateX(0deg);
+          transform: translateY(0) rotateX(0deg);
+}
+       
+img{
+  align-items: right;
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  border-radius: 35px;
+ margin-left: 800px;
+         background: transparent;
+         float: left;
+         margin-right: 10px;
+         position: float;
+         align-items: right;
+}
+      </style>
+   </head>
+   <body>
+       <header>
+        <div class="nav">
+         <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="tools.html">Tools</a>
+  </li>
+  <li class="nav-item">
+   <a class="nav-link" href="about.html">About</a>
+ </li>
+ <li class="nav-item">
+  <div class="dropdown">
+      <a class='nav-link dropdown-toggle' href='edit.php?id=$res_id' id='dropdownMenuLink'
+          data-bs-toggle='dropdown' aria-expanded='false'>
+          <i class='bi bi-person'></i>
+      </a>
+
+
+      <ul class="dropdown-menu mt-2 mr-0" aria-labelledby="dropdownMenuLink">
+
+          <li>
+              <?php
+
+              $id = $_SESSION['id'];
+              $query = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
+
+              while ($result = mysqli_fetch_assoc($query)) {
+                  $res_username = $result['username'];
+                  $res_email = $result['email'];
+                  $res_id = $result['id'];
+              }
+
+
+              echo "<a class='dropdown-item' href='edit.php?id=$res_id'>Change Profile</a>";
+
+
+              ?>
+
+          </li>
+          <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+      </ul>
+</ul>
+         
+      </div>  
+       </header>
+    <b><h1>     Academy of BlackHat</b></h1>
+   
+   <div>
+    <p>
+      <h4><b>List of Best Operating Systems (OS) for Hacking</b></h4>
+
+
+
+<h4><b>Top 10 OS for Ethical Hacking in 2025</b></h4>
+Let's discuss the leading operating systems for ethical hacking in 2025, equipped with robust tools, specifications and features.<br>
+
+<h4><b><a href="https://www.kali.org/get-kali/#kali-platforms">1. Kali Linux</a></b></h4>
+
+
+It is the most widely used ethical hacking OS. It is a Debian-based Linux - based operating system developed for penetration testing and digital forensics. It is financed and maintained by Offensive Security Ltd. The greatest and most widely used operating system for hackers is Kali Linux. It includes the first Nexus device open-source Android penetration test. The forensic mode is another excellent feature of the Kali Linux operating system. <br>
+
+<b>Features:</b> <br>
+  <img src="kali.png" alt="click to get kali">
+
+
+Testing for penetration is possible. <br>
+Both a 32-bit and 64-bit version of this platform is available.<br> 
+Kali Linux can be updated. <br>
+This OS supports complete disc encryption. <br>
+The network-based Kali Linux installation can be easily automated and customized. <br>
+Support for live USB installations. <br>
+Forensic work can be done using its forensics mode. <br><br>
+<b>System Requirements:</b> <br>
+
+2 GB of RAM <br>
+20 GB of disk space <br>
+32- or 64-bit CPU (single-core) with 2 GHz speed or better <br>
+High-definition graphics card and monitor <br>
+Broadband internet connection<br><br>
+<h4><b><a href="https://parrotsec.org/docs/">2. Parrot Security OS</a></b></h4>
+
+
+To give ethical hackers the best-in-class experience of penetration and security testing in real-world systems, Parrot Security OS is built on Debian GNU/Linux and integrated with the Frozen box OS and Kali Linux. Additionally, the Frozen box team intends to use it to offer vulnerability evaluation and mitigation, computer forensics, and anonymous Web browsing. <br>
+
+Kali repositories are used by Parrot Security OS for a variety of package updates and to include new tools.<br>
+
+<b>Features:</b> <br>
+<img src="parrot.webp">
+It is offered as resource-constrained, lightweight software. <br>
+
+The source code is available for reading and modification. <br>
+Offers assistance from professionals to aid you with cybersecurity. <br>
+The distributed infrastructure of this hacker OS includes dedicated CDNs (Content Distribution Network). <br>
+This operating system can be shared with others. <br>
+<b>System Requirements:</b> <br>
+
+There is no need for graphic acceleration. <br>
+RAM must be at least 320MB. <br>
+It needs a dual-core CPU running at least at 1GHz. <br>
+It can boot in legacy and UEFI modes as well <br>
+The operating system installation requires at least 16GB of hard disc space. <br> <br>
+<h4><b><a href="https://distrowatch.com/table.php?distribution=deft">3. DEFT Linux </a></b></h4>
+
+The Hacker News <br>
+
+Digital Evidence and Forensic Toolkit, or DEFT, is an open-source Linux distribution. It is constructed around the DART (Digital Advanced Response Toolkit) software and is based on Ubuntu. It includes numerous well-known forensic tools and files that are useful to ethical hackers, penetration testers, IT security experts, and other people. <br>
+
+<b>Features:</b><br>
+<img src="deft.jpg">
+It is based on the Lubuntu system and includes free penetration testing and digital forensics software.<br> 
+Complete support for logical acquisitions in iOS 7.1, Android, and Bitlocker-encrypted drives. <br>
+Digital Forensics Framework 1.3 <br>
+<b>System Requirements:</b> <br>
+
+A 200 MHz X86 CPU and 128 MB of RAM are the minimal requirements. <br>
+Since DEFT Zero is a Live MODE edition and is based on Lubuntu, it takes a unique approach.<br><br>
+<h4><b><a href="https://www.samurai-wtf.org/">4. Samurai Web Testing Framework</a></b></h4><br>
+Samurai Web Testing Framework is essentially a live Linux system that is already set up to function as a platform for web pen-testing. The framework includes a variety of open source and free hacking tools for finding weaknesses in websites. For web penetration testing, it is frequently referred to be the ideal operating system. <br>
+
+<b>Features:</b><br>
+<img src="samurai.jpg">
+Samurai Web Testing Framework is an open-source project that focuses on exploiting websites. <br>
+It has already been set up for web pen-testing. <br>
+Features that can be used to target the website for the attack. <br>
+It includes tools like WebScarab (a tool for evaluating web security applications)<br> and ratproxy (a program for running a web proxy server). <br>
+<b>System Requirements:</b> <br>
+
+2 GB of RAM <br>
+20 GB of disk space <br>
+32 or 64-bit CPU (single core) with 2 GHz speed or better <br><br>
+<h4><b><a href="https://archiveos.org/nodezero/">5. NodeZero Linux</a></b></h4><br>
+NodeZero is a free and open-source Linux distribution for penetration testing that uses the Ubuntu repositories for updates. It includes a collection of fundamental services that are necessary for performing a variety of tasks, together with more than 300 penetration testing tools. The dual-arch live DVD ISO image of the Linux distribution, which supports both 32-bit and 64-bit computing architectures, is available for download. <br>
+
+<b>Features:</b><br>
+<img src="node.jpg">
+System memory diagnostic tests <br>
+Hard disk booting <br>
+Install direct <br>
+Safe mode booting <br>
+Text-mode or debug mode <br>
+<b>System Requirements:</b><br>
+
+2 CPU (physical or virtual) <br>
+8GB RAM <br>
+20 GB free HDD space <br><br>
+<h4><b><a href="https://www.digi77.com/linux-kodachi/">6. Linux Kodachi</a></b></h4><br>
+
+Based on Ubuntu 18.04.6, the Linux Kodachi operating system will give you a private, non-forensic, and anonymous operating system that includes all the characteristics that someone who cares about privacy would need to be secure. <br>
+
+Kodachi is incredibly simple to use; all you need to do is boot it up on your computer using a USB drive, at which point you should have a fully functional operating system with established VPN and Tor connections as well as an active DNScrypt service.  <br>
+
+<b>Features:</b><br>
+<img src="kodachi.webp">
+Automatic connection to a VPN (all network traffic) <br>
+Automatic connection to the Tor network (browser traffic) <br>
+Automatic DNS encryption <br>
+<b>System Requirements:</b> <br>
+
+2 CPU (physical or virtual) <br>
+8GB RAM <br>
+20 GB free HDD space <br><br>
+<h4><b><a href="https://blackarch.org/">7. Blackarch Linux</a></b></h4><br>
+
+Medium<br>
+
+It is an Arch Linux-based best distro for hacking and for penetration testers and security researchers. It is regarded as the best OS for hacking distribution for security researchers to use to undertake application-based and web security testing because it comes with over 1,600 tools. It is a serious rival to Kali Linux and Backbox in terms of tool diversity and usability. <br>
+
+<b>Features:</b><br>
+<img src="black arch.jpg">
+Several window managers in a live ISO. Blackarch gets out of the way so users can complete <br>their tasks without interruptions<br> 
+Different architectures are supported <br>
+An installer that supports source-based construction <br>
+More than 1800 tools <br>
+Install the packages one at a time or in groups <br>
+<b>System Requirements:</b> <br>
+
+2Ghz Quad-Core Processor. <br>
+6 GB Random Access Memory (RAM) <br>
+50 GB Disk Space. <br>
+High-definition graphics card. <br><br>
+<h4><b><a href="https://www.networksecuritytoolkit.org/nst/index.html">8. Network Security Toolkit (NST)</a></b></h4> <br>
+On both 32-bit and 64-bit platforms, the Network Security Toolkit Linux distribution is based on Fedora. The goal of this bootable live CD was to give you access to the top open-source network security tools for penetration testing. This user-friendly hacking distribution turns x86 PCs through an ethical hacking tool that may be used for network traffic sniffing, intrusion detection, network packet creation, network/host scanning, etc. <br>
+
+<b>Features:</b><br>
+<img src="nst.jpg">
+Multi-Tap Network Packet Capture <br>
+Web-Based Network Security Tools Management <br>
+Host/IPv4 Address Geolocation <br>
+Network/System Monitoring <br>
+Network Intrusion Detection <br>
+Network Interface Bandwidth Monitor <br>
+Web-based Snort IDS Integration <br>
+Active Connections Monitor <br>
+<b>System Requirements:</b> <br>
+
+A i686 or x86_64 compatible CPU (Core 2 series or later) <br>
+At least 512MB of RAM (we recommend at least 1024MB if you want to use a graphical desktop) <br>
+A DVD drive and BIOS capable of booting from a DVD  <br>
+A supported Ethernet (NIC) Adapter or WIFI card <br><br>
+<h4><b><a href="https://archiveos.org/bugtraq/">9. BugTraq</a></b></h4><br>
+For in-depth analysis and notification of software security vulnerabilities, BugTraq is a clarification mailing list. The foundation of the global security community on the Internet is BugTraq. It is the best OS for penetration testing. <br>
+
+<b>Features:</b><br>
+<img src="bug.jpg">
+A wide range of pentesting tools are available on Bugtraq, including mobile forensic tools, virus testing labs,<br> tools created by the Bugtraq-Community <br>
+audit tools for GSM,WIFI, Bluetooth, and RFID <br>
+integrated Windows tools <br>
+ipv6-focused tools, and standard forensics and pentesting tools.4 <br>
+<b>System Requirements:</b> <br>
+
+1GHz x86 processor. <br>
+512 MB of system memory (RAM) <br>
+15 GB of disk space for installation. <br>
+Graphics card capable of 800x600 resolution. <br>
+DVD-ROM drive or USB port. <br><br>
+<h4><b><a href="https://archiveos.org/cyborg-hawk/">10. Cyborg Hawk Linux</a></b></h4><br>
+The most sophisticated, potent, and still stunning penetration testing distribution ever made. lined up with the best tools for professional ethical hackers and cyber security specialists. <br>
+
+Utilize Cyborg to streamline security throughout your IT infrastructure. It is true power stems from the knowledge that a tester needs a powerful and effective system, one that gains from a robust variety of tools and is combined with a stable Linux environment. <br>
+
+<b>Features:</b><br>
+<img src="hawk.jpg">
+Includes over 750 penetration testing tools <br>
+Cyborg Hawk is and always will be completely free <br>
+Has the capacity to be utilised as a live operating system <br>
+Mobile Security, Wireless Security, Forensics, Stress Testing, Reverse Engineering, and Exploitation Toolkit <br>
+Full support for virtual machines. Version 1.1 <br>
+It now has a repository of its own <br>
+Stable and dependable <br>
+Support for a range of wireless devices<br> 
+Everything is in its proper position and the menu is well organised <br>
+An injected kernel that was patched <br>
+<b>System Requirements:</b> <br>
+
+Memory: 4 GB. <br>
+Graphics Card: NVIDIA GeForce 510.<br> 
+CPU: Intel Core 2 Duo E8400. <br><br>
+
+    </p>
+   </div><b><h4>Download the Operating system whatever you interested on this....</h4></b>
+   <br>
+   <footer>
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br><br>
+    <h4>  Academy of BlackHat</h4><br>
+    
+    <h7>Note:: This content is educational purpose only,</h7><br><h7>based on this any illegal activities are noticed we are not responsible fot that. </h7><br>
+    <h8>-- shaik sunny</h8><br>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<h5>Future Hackers Learn for free now..... </h5>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+ </footer>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

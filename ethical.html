@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+      <link rel="stylesheet" href="styles.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+      <link href="edit.php" rel="php">
+      <link href="logout.php" rel="php">
+
+      <title> Academy of BlackHat </title>
+      <style type="text/css">
+         body{
+            background-color: #212424;
+            text-decoration:bold;
+            color: whitesmoke;
+            padding: 50px;
+            
+         }
+         header{
+            align-items: right;
+            padding-left: 990px;
+         }
+        .logo{
+         width: 500px;
+         height: 500px;
+         border-radius: 250px;
+         padding: 50px;
+         background: transparent;
+         float: left;
+         margin-right: 10px;
+         position: float;
+         align-items: right;
+        }
+      
+       .phases{
+        padding-left: 790px;
+        position:absolute;
+        background: transparent;
+        border-radius: 70px;
+        height: 580px;
+      margin-bottom: 10px;
+       }
+       .kill{
+        
+        padding-left: 790px;
+        position:absolute;
+        background: transparent;
+        border-radius: 70px;
+        height: 580px;
+      margin-bottom: 10px;
+       
+       }
+
+      </style>
+   </head>
+   <body>
+       <header>
+        <div class="nav">
+         <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="tools.html">Tools</a>
+  </li>
+  <li class="nav-item">
+   <a class="nav-link" href="about.html">About</a>
+ </li>
+ <li class="nav-item">
+  <div class="dropdown">
+      <a class='nav-link dropdown-toggle' href='edit.php?id=$res_id' id='dropdownMenuLink'
+          data-bs-toggle='dropdown' aria-expanded='false'>
+          <i class='bi bi-person'></i>
+      </a>
+
+
+      <ul class="dropdown-menu mt-2 mr-0" aria-labelledby="dropdownMenuLink">
+
+          <li>
+              <?php
+
+              $id = $_SESSION['id'];
+              $query = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
+
+              while ($result = mysqli_fetch_assoc($query)) {
+                  $res_username = $result['username'];
+                  $res_email = $result['email'];
+                  $res_id = $result['id'];
+              }
+
+
+              echo "<a class='dropdown-item' href='edit.php?id=$res_id'>Change Profile</a>";
+
+
+              ?>
+
+          </li>
+          <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+      </ul>
+</ul>
+         
+      </div>  
+       </header>
+    <b><h1>     Academy of BlackHat</b></h1>
+     <h3><b>Ethical Hacking :</b></h3>
+     <h4><b>What is Ethical Hacking?</b></h4> 
+     Ethical hacking refers to the process of intentionally probing a system for vulnerabilities in a 
+     controlled, authorized manner to identify <br>weaknesses before malicious hackers can exploit 
+     them. The main goal is securing systems, not compromising them.<br> 
+   <h4><b>  Why Ethical Hacking is Important ?</b></h4> 
+     Identify vulnerabilities: Protect systems from real hackers.<br> 
+     Prevent data breaches: Guard sensitive information. <br>
+     Strengthen defences: Ensure that the system is fortified against attacks.<br> <br>
+    
+     <h4><b>The Phases of Hacking </b></h4><br>
+     Ethical hacking follows a systematic process, known as the ethical hacking lifecycle. Here 
+     are the main stages:<br> <img class="phases" src="phases.jpg" >
+     <h4>1. Reconnaissance:</h4> 
+      The hacker collects information about the target system. <br>
+      This can be active (direct interaction with the system) or passive (gathering info from 
+     public sources). <br>
+  <h4> 2. Scanning:</h4> 
+      This phase involves identifying live hosts, open ports, and services running on the 
+     system. <br>
+      Tools: nmap, netdiscover. <br>
+  <h4> 3. Enumeration:</h4> 
+      Extracting detailed information such as user accounts, shares, and services. <br>
+      Tools: enum4linux, snmp-check. <br>
+    <h4> 4. Gaining Access:</h4> 
+      The hacker attempts to exploit the discovered vulnerabilities to gain access to the 
+     system. <br>
+      Tools: Metasploit, Hydra. <br>
+     <h4>5. Maintaining Access: </h4>
+      Once access is gained, the hacker may create a backdoor for future entry. <br>
+      Tools: Netcat, Metasploit. <br>
+    <h4> 6. Covering Tracks:</h4> 
+      The final phase is about erasing logs and traces to avoid detection. <br>
+      Tools: Clearev, Rootkit Hunter<br><br>
+    <h4><b> For Real-World Hackers:</b></h4> The Cyber Kill Chain and MITRE ATT&CK Frameworks 
+As a hacker operating in the real world, you know that cybersecurity is more than just tools 
+and commands—it’s about strategy, precision, and understanding your target. Two critical 
+frameworks that every hacker should master are the Cyber Kill Chain and MITRE ATT&CK. 
+These frameworks break down the art and science of hacking into structured phases, giving 
+you the edge in understanding and emulating attack scenarios. <br>
+<h4>The Cyber Kill Chain:</h4> 
+Developed by Lockheed Martin, the Cyber Kill Chain is a seven-step framework that 
+outlines the lifecycle of a cyberattack, from preparation to execution. Here's what each 
+phase means to a hacker:<br>
+<div class="kill">
+<img src="@#">
+<img src="@#">
+<img src="@#">
+<img src="@#">
+<img src="@#">
+<img src="@#">
+<img src="@#">
+<img src="@#">
+</div>
+<h4>1. Reconnaissance</h4>
+<b>o Goal:</b> Gather intelligence about your target. <br>
+<b>o Real-World Use:</b> Use OSINT tools, scan networks, and map out vulnerabilities. <br>
+<b>o Tools:</b> Nmap, Shodan, Maltego. <br>
+<h4>2. Weaponization</h4>
+<b>o Goal:</b> Craft your exploit. Combine malware with a delivery method. <br>
+<b>o Real-World Use: </b>Write custom payloads or tweak existing ones to evade 
+detection. <br>
+<b>o Tools:</b> msfvenom, Veil, Python. <br>
+<h4>3. Delivery</h4>
+<b>o Goal:</b> Deliver the weapon to the target via phishing, USB drops, or direct access. <br>
+<b>o Real-World Use:</b> Choose the most effective vector based on reconnaissance. <br>
+<b>o Tools:</b> Social engineering, email spoofing, PowerShell scripts. <br>
+<h4>4. Exploitation</h4>
+<b>o Goal:</b> Trigger the payload to exploit the vulnerability. <br>
+<b>o Real-World Use:</b> Execute exploits with precision to gain initial access. <br>
+<b>o Tools:</b> Metasploit, ExploitDB scripts. <br>
+<h4>5. Installation</h4>
+<b>o Goal:</b> Install backdoors or malware to maintain access. <br>
+<b>o Real-World Use:</b> Drop persistent shells or RATs for ongoing control. <br>
+<b>o Tools:</b> Cobalt Strike, Empire, Netcat. <br>
+<h4>6. Command & Control (C2)</h4>
+<b>o Goal:</b> Establish a secure communication channel. <br>
+<b>o Real-World Use:</b> Use stealthy techniques to avoid detection while controlling 
+compromised systems. <br>
+<b>o Tools:</b> C2 frameworks like Sliver, Covenant. <br>
+<h4>7. Actions on Objectives </h4>
+<b>o Goal:</b> Achieve your ultimate objective, whether it’s data exfiltration, sabotage, 
+or lateral movement. <br>
+<b>o Real-World Use:</b> Execute final operations while maintaining stealth. <br>
+<b>o Tools:</b> Mimikatz, BloodHound, Rclone.<br>
+
+   <footer>
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br><br>
+    <h4>  Academy of BlackHat</h4><b><h5><a href="CEHv13 Practical Notes .pdf" download>
+      <img src="#" alt="Click to download  the CEHv13 Practicals notes........ " width="90" height="90">
+    </a></h5></b>
+    
+    <h7>Note:: This content is educational purpose only,</h7><br><h7>based on this any illegal activities are noticed we are not responsible fot that. </h7><br>
+    <h8>-- shaik sunny</h8><br>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<h5>Future Hackers Learn for free now..... </h5>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+ </footer>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
